@@ -9,10 +9,13 @@ const DataSchema = new mongoose.Schema(
     discountPrice: { type: String, required: true },
     image: { type: String, required: true },
     Stock: { type: Boolean, required: true },
-    discount: { type: Boolean, required: true },
-    productCategory: { type: String, required: true },
+    remark: { type: String, required: true },
 
     categoryID: {
+      type: mongoose.Schema.Types.ObjectId,
+      required: true,
+    },
+    brandID: {
       type: mongoose.Schema.Types.ObjectId,
       required: true,
     },
@@ -23,6 +26,6 @@ const DataSchema = new mongoose.Schema(
   }
 );
 
-const CategoryModel = mongoose.model("categories", DataSchema);
+const ProductModel = mongoose.model("products", DataSchema);
 
-export default CategoryModel;
+export default ProductModel;
