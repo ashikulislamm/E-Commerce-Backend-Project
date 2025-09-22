@@ -2,7 +2,7 @@ import mongoose from "mongoose";
 import app from "./app.js";
 import config from "./src/config/config.js";
 
-const { PORT, MONGO_URI, RAFI } = config;
+const { PORT, MONGO_URI } = config;
 
 mongoose
   .connect(MONGO_URI)
